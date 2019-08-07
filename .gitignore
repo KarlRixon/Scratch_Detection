@@ -1,0 +1,5 @@
+.idea/
+tail_data/
+train_data/
+develop_code_bk/net.pkl
+net.pkl

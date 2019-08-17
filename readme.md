@@ -26,6 +26,8 @@ train_log.txt: 记录训练过程中的loss, acc等信息
 
 ## 用法及流程
 
+(18与50代表resnet18和resnet50,500和1000代表epoch)
+
 1.确保目录下含有以下文件：`train_data/`, `my_data_set.py`, `my_data_set_for_predict.py`, `predict.ipynb`, `tail.ipynb`, `torchvision_resnet18.py`, `train_labels.txt`, `train.ipynb`
 
 2.用ipython notebook打开并运行`tail.ipynb`，会生成`tail_test.txt`, `tail_train.txt`, `tail_data/`
@@ -36,6 +38,11 @@ train_log.txt: 记录训练过程中的loss, acc等信息
 
 ## 效果展示
 
-![](develop_code_bk/loss.png)
-![](develop_code_bk/acc.png)
-![](develop_code_bk/predict.png)
+resnet18训练1000轮结果展示
+![](develop_code_bk/loss_18_1000.png)
+![](develop_code_bk/acc_18_1000.png)
+![](develop_code_bk/predict_18_1000.png)
+
+resnet50训练1000轮结果展示
+![](develop_code_bk/loss_50_1000.png)
+![](develop_code_bk/acc_50_1000.png)

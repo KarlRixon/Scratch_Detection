@@ -2,4 +2,7 @@
 tail_data/
 train_data/
 develop_code_bk/net.pkl
+develop_code_bk/net_18_1000.pkl
+develop_code_bk/net_50_500.pkl
+develop_code_bk/net_50_1000.pkl
 net.pkl

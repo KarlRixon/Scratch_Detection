@@ -1,12 +1,12 @@
 import torch
 import torch.nn as nn
-
-# from .utils import load_state_dict_from_url
+#from .utils import load_state_dict_from_url
 
 
 __all__ = ['ResNet', 'resnet18', 'resnet34', 'resnet50', 'resnet101',
            'resnet152', 'resnext50_32x4d', 'resnext101_32x8d',
            'wide_resnet50_2', 'wide_resnet101_2']
+
 
 model_urls = {
     'resnet18': 'https://download.pytorch.org/models/resnet18-5c106cde.pth',
@@ -218,28 +218,28 @@ def _resnet(arch, block, layers, pretrained, progress, **kwargs):
         model.load_state_dict(state_dict)
     return model
 
-
-def resnet18(pretrained=False, progress=True, **kwargs):
-    r"""ResNet-18 model from
-    `"Deep Residual Learning for Image Recognition" <https://arxiv.org/pdf/1512.03385.pdf>'_
+def resnet50(pretrained=False, progress=True, **kwargs):
+    r"""ResNet-50 model from
+    `"Deep Residual Learning for Image Recognition" <https://arxiv.org/pdf/1512.03385.pdf>`_
     Args:
         pretrained (bool): If True, returns a model pre-trained on ImageNet
         progress (bool): If True, displays a progress bar of the download to stderr
     """
-    return _resnet('resnet18', BasicBlock, [2, 2, 2, 2], pretrained, progress,
+    return _resnet('resnet50', Bottleneck, [3, 4, 6, 3], pretrained, progress,
                    **kwargs)
 
-"""
+"""	   
 def main():
     try:
         from torch.hub import load_state_dict_from_url
     except ImportError:
         from torch.utils.model_zoo import load_url as load_state_dict_from_url
 
-    net = resnet18()
+    net = resnet50()
     print(net)
 
 
 if __name__ == '__main__':
     main()
+	
 """

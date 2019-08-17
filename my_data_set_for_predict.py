@@ -32,26 +32,12 @@ class MyDataset(Dataset):
         self.img = img
         self.coords = coords
         self.side = side
-        # imgs = []
-        # for line in fh:
-        #     line = line.strip('\n')
-        #     line = line.rstrip()
-        #     words = line.split()
-        #     imgs.append((words[0], int(words[1])))
-        # self.imgs = imgs
-        # self.transform = transform
-        # self.target_transform = target_transform
-        # self.loader = loader
 
     def __getitem__(self, index):
         x, y = self.coords[index][0], self.coords[index][1]
         tail = transforms.functional.crop(self.img, y, x, self.side, self.side)
         if self.transform is not None:
             tail = self.transform(tail)
-        # fn, label = self.imgs[index]
-        # img = self.loader(fn)
-        # if self.transform is not None:
-        #     img = self.transform(img)
         return tail
 
     def __len__(self):

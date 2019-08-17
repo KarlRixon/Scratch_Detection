@@ -39,10 +39,12 @@ train_log.txt: 记录训练过程中的loss, acc等信息
 ## 效果展示
 
 resnet18训练1000轮结果展示
+
 ![](develop_code_bk/loss_18_1000.png)
 ![](develop_code_bk/acc_18_1000.png)
 ![](develop_code_bk/predict_18_1000.png)
 
 resnet50训练1000轮结果展示
+
 ![](develop_code_bk/loss_50_1000.png)
 ![](develop_code_bk/acc_50_1000.png)
